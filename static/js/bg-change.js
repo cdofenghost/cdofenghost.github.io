@@ -1,11 +1,11 @@
 const leadHeading = document.querySelector('.lead-heading');
 const overlayBalls = document.querySelector('.overlay-balls');
 
-const screenWidth = window.screen.width;
-const screenHeight = window.screen.height;
+let screenWidth = window.screen.width;
+let screenHeight = window.screen.height;
 
-const width = window.innerWidth;
-const height = window.innerHeight;
+let width = window.innerWidth;
+let height = window.innerHeight;
 
 let mX = 0;
 let mY = 0;
@@ -26,6 +26,8 @@ onresize = () => {
 
     width = window.innerWidth;
     height = window.innerHeight;
+
+    console.log(screenWidth, screenHeight, width, height);
 };
 
 document.addEventListener('mousemove', (event) => {
