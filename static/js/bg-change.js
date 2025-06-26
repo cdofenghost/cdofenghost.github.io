@@ -4,8 +4,8 @@ const overlayBalls = document.querySelector('.overlay-balls');
 const screenWidth = window.screen.width;
 const screenHeight = window.screen.height;
 
-let width = window.innerWidth;
-let height = window.innerHeight;
+const width = window.innerWidth;
+const height = window.innerHeight;
 
 let mX = 0;
 let mY = 0;
@@ -21,6 +21,9 @@ const redColorB = 75;
 const rangeAmount = 500;
 
 onresize = () => {
+    const screenWidth = window.screen.width;
+    const screenHeight = window.screen.height;
+    
     width = window.innerWidth;
     height = window.innerHeight;
 };
