@@ -26,8 +26,6 @@ onresize = () => {
 
     width = window.innerWidth;
     height = window.innerHeight;
-
-    console.log(screenWidth, screenHeight, width, height);
 };
 
 document.addEventListener('mousemove', (event) => {
@@ -102,7 +100,7 @@ function setNewPositions()
 
     for (var i = 0; i < ballAmount; i++)
     {
-        var posX = Math.floor(-screenWidth / 2 + Math.random()*(width + 1));
+        var posX = Math.floor(-820 + Math.random()*(width + 1));
         var posY = Math.floor(-screenHeight + Math.random()*(height + 1));
 
         ballPositionsX.push(posX);
@@ -167,6 +165,8 @@ function animateBalls(currentTime)
 
         ball.style.top = `${goalY}px`;
         ball.style.left = `${goalX}px`;
+
+        //console.log(`screenWidth: ${screenWidth}, screenHeight: ${screenHeight}, width: ${width}, height: ${height}\nposX: ${goalX} posY: ${goalY}`);
 
         var rangeValue = inBallRange(vectorLength(mX - (goalX + screenWidth/2), mY - (goalY + screenHeight)));
 
