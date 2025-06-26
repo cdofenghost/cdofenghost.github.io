@@ -21,9 +21,9 @@ const redColorB = 75;
 const rangeAmount = 500;
 
 onresize = () => {
-    const screenWidth = window.screen.width;
-    const screenHeight = window.screen.height;
-    
+    screenWidth = window.screen.width;
+    screenHeight = window.screen.height;
+
     width = window.innerWidth;
     height = window.innerHeight;
 };
