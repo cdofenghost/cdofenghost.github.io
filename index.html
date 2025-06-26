@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/css/styles.css">
+    <script src="https://kit.fontawesome.com/330a6c34ff.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="overlay-balls" style="z-index: -1;"></div>
+        <div class="content-container">
+            <div class="cursor-follower" style="z-index: 3;"></div>
+            <div class="head-follower-1" style="width: 36px; height: 36px; z-index: 3;"></div>
+            <div class="head-follower-2" style="width: 24px; height: 24px; z-index: 3;"></div>
+            <div class="head-follower-3" style="width: 12px; height: 12px; z-index: 3;"></div>
+
+            <div class="center-box">
+                <div class="lead-heading">
+                    Привет, я <span style="color: #6ab04c; font-weight: 400;">Костя</span>.
+                    <br>Хочешь посмотреть, над чем работаю?
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <button class="fun-button" style="margin-top: 6px; margin-bottom: 40vh;" onclick="scrollToSection('about-me')">Давай</button>
+            </div>
+        </div>
+        <div class="header-box" style="user-select: none; font-family: 'Rubik', sans-serif;">
+            <div style="width: 100%; text-align: center;"><i>cdofenghost</i></div>
+            <div style="width: 100%; text-align: center;">
+                <button class="header-button" onclick="scrollToSection('about-me')">Обо мне</button>
+                <button class="header-button" onclick="scrollToSection('main-projects')">Основное</button>
+                <button class="header-button" onclick="scrollToSection('side-projects')">Личное</button>
+                <button class="header-button" onclick="scrollToSection('contacts')">Контакты</button>
+            </div>
+            <div style="width: 100%; text-align: center;"><i>cdofenghost</i></div>
+        </div>
+        <div class="content-container" style="z-index: 1; background-color: white;">
+            <div style="justify-items: center; padding: 24px 0px;">
+                <div id="about-me" class="highlighted-text" style="width: fit-content; font-size: 2rem; margin: 1.2rem 0px 2.4rem 0px;">Обо мне</div>
+            </div>
+            <div class="about-me-section">
+                <div class="about-me-desc">
+                    <div class="image-holder">
+                        <img src="./static/imgs/me.png" width="200">
+                    </div>
+                    <div class="casual-text">
+                    <i>Мне 20 лет, я энергичный и креативный мечтатель. Мое основное направление в данный момент - веб-разработка. Я еще новичок в этом деле, но стремлюсь развиваться и открывать для себя что-то новое.  
+                    <br>Обучаюсь в ТУСУРе. В свободное время люблю заниматься театральной деятельностью, делать видеоигры и проводить время с друзьями.</i>
+                    </div>
+                </div>
+                <div class="icon-grid">
+                    <div class="icon-container">
+                        <img src="./static/imgs/html.png">
+                        <div class="highlighted-text">HTML</div>
+                    </div>
+                    <div class="icon-container">
+                        <img src="./static/imgs/css.svg">
+                        <div class="highlighted-text">CSS</div>
+                    </div>
+                    <div class="icon-container">
+                        <img src="./static/imgs/js.png">
+                        <div class="highlighted-text">JavaScript</div>
+                    </div>
+                    <div class="icon-container">
+                        <img src="./static/imgs/python.webp">
+                        <div class="highlighted-text">Python</div>
+                    </div>
+                    <div class="icon-container">
+                        <img src="./static/imgs/fastapi.png">
+                        <div class="highlighted-text">FastAPI</div>
+                    </div>
+                    <div class="icon-container">
+                        <img src="./static/imgs/postgre.png">
+                        <div class="highlighted-text">PostgreSQL</div>
+                    </div>
+                </div>
+            </div>
+            <div style="justify-items: center;">
+                <div class="highlighted-text" id="main-projects" style="width: fit-content; font-size: 2rem; margin: 2.4rem 0px;">Основные проекты</div>
+            </div>
+            <div class="main-projects-section">
+                <div class="application-container">
+                    <a href="https://github.com/cdofenghost/mts-hack" style="cursor: none;">
+                        <div class="icon">
+                            <img src="./static/imgs/mts_showcase.jpg">
+                        </div>
+                    </a>
+                    <div class="casual-text">
+                        <div class="highlighted-text">MTS Weather</div>
+                        Веб-приложение, разработанное в рамках хакатона от МТС "Система: Хак" с командой "Вайб-кодеры". 
+                        <br>Приложение предоставляет более точное предсказание погоды на 24 часа вперед с помощью модели-трансформера.
+                        <br>В команде я участвовал в качестве фронтенд-разработчика (ванилла - HTML, JS и CSS).
+                        <a href="https://github.com/cdofenghost/mts-hack" style="cursor: none;"><button class="show-button">Проект на GitHub</button></a>
+                    </div>
+                    <div class="casual-text">
+                        <div class="highlighted-text">VIN-scrapper</div>
+                            Google-расширение, разработанное в рамках интенсива от ИТ-академии ТУСУРа (Prime Technology).
+                            <br>Расширение для поиска данных о машине по серии, поиска запчастей и их альтернатив по VIN-коду.
+                            <br>Роль в команде - Full-stack разработчик и тим-лидер. Инструменты: Python, FastAPI, PostgreSQL, HTML, JS и CSS.
+                        <a href="https://github.com/cdofenghost/mech_parts" style="cursor: none;"><button class="show-button">Проект на GitHub</button></a>
+                    </div>
+                    <a href="https://github.com/cdofenghost/mech_parts" style="cursor: none;">
+                        <div class="icon">
+                            <img src="./static/imgs/sto.jpg" style="max-height: 15rem;">
+                        </div>
+                    </a>
+                    <a href="https://github.com/cdofenghost/multitasker" style="cursor: none;">
+                        <div class="icon">
+                            <img src="./static/imgs/multitasker.jpg">
+                        </div>
+                    </a>
+                    <div class="casual-text">
+                        <div class="highlighted-text">MultiTasker</div>
+                            Веб-приложение, разработанное в рамках дисциплины "Веб-разработка на Python".
+                            <br>Мультитаскер - приложение-планировщик задач для работы в проектах. 
+                            <br>Построено с помощью Python, FastAPI, PostgreSQL, HTML, ванилла JS, CSS.
+                        <a href="https://github.com/cdofenghost/multitasker" style="cursor: none;"><button class="show-button">Проект на GitHub</button></a>
+                    </div>
+                </div>
+            </div>
+            <div style="justify-items: center;">
+                <div id="side-projects" class="highlighted-text" style="width: fit-content; font-size: 2rem; margin: 2.4rem 0px;">Личные проекты</div>
+            </div>
+            <div class="side-projects-section">
+                <div class="application-container">
+                    <div class="casual-text">
+                        <div class="highlighted-text">Сайт-визитка<br>для Театральной Студии "Щеглы"</div>
+                        Я люблю театр и в течениие 10 лет я активно участвовал в жизни Образцовой Театрально-Эстрадной Студии "Щеглы". 
+                        <br>Это известная томская театральная студия, обладающая большим репертуаром. 
+                        <br>Решил применить свои знания для полезного дела, и сейчас постепенно разрабатываю сайт-визитку нашей студии.
+                        <br>Здесь можно посмотреть промежуточный результат. 
+                        <a href="https://cdofenghost.github.io/schegli-page/" style="cursor: none;"><button class="show-button">Посмотреть</button></a>
+                    </div>
+                    <a href="https://cdofenghost.github.io/schegli-page/" style="cursor: none;">
+                        <div class="icon">
+                            <img src="./static/imgs/schegli-page.jpg">
+                        </div>
+                    </a>
+                    <a href="https://github.com/cdofenghost/monopoly" style="cursor: none;">
+                        <div class="icon">
+                            <img src="./static/imgs/monopoly.jpg">
+                        </div>
+                    </a>
+                    <div class="casual-text">
+                        <div class="highlighted-text">Монополия</div>
+                        Monopoly One, но только на одном компьютере.
+                        <br>Может когда-нибудь я решусь сделать игру по LAN.
+                        <br>Реализовал на Python и PyQT6.
+                        <a href="https://github.com/cdofenghost/monopoly" style="cursor: none;"><button class="show-button">Проект на GitHub</button></a>
+                    </div>
+                </div>
+            </div>
+            <div style="justify-items: center;">
+                <div id="contacts" class="highlighted-text" id="main-projects" style="width: fit-content; font-size: 2rem; margin: 2.4rem 0px;">Контакты</div>
+            </div>
+            <div class="contacts-section" style="display: flex; justify-content: center;">
+                <a href="https://github.com/cdofenghost" style="cursor: none;">
+                    <div class="contact-icon">
+                        <img src="./static/imgs/github.svg" style="width: 3rem;">
+                    </div>
+                </a>
+                <a href="https://vk.com/dofenghost" style="cursor: none;">
+                    <div class="contact-icon">
+                        <img src="./static/imgs/vk.png" style="width: 3rem; margin-left: 1vw;">
+                    </div>
+                </a>
+                <a href="https://t.me/dofenghost" style="cursor: none;">
+                    <div class="contact-icon">
+                        <img class="contact-icon" src="./static/imgs/telegram.png" style="width: 3rem; margin-left: 1vw;">
+                    </div>
+                </a>
+                <a href="mailto:dofenspot@gmail.com" style="cursor: none;">
+                    <div class="contact-icon">
+                        <img class="contact-icon" src="./static/imgs/email.jpg" style="width: 3rem; margin-left: 0.8vw;">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container"></div>
+    </footer>
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    <script src="./static/js/cursor.js"></script>
+    <script src="./static/js/bg-change.js"></script>
+</body>
+</html>
