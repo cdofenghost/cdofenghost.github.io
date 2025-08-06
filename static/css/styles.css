@@ -229,7 +229,7 @@ img {
 .about-me-section, .two-items {
     box-sizing: border-box;
     display: grid;
-    gap: 24px;
+    gap: 1.2rem;
     grid-template-columns: repeat(auto-fill, minmax(28.5rem, 1fr));
     align-items: center;
     justify-items: center;
@@ -328,6 +328,15 @@ img {
 
 .application-container {
     display: grid;
+    @media screen and (width <= 40rem) 
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        .item {
+            order: 0 !important;
+        }
+    }
     grid-template-columns: 1fr 1fr;
     gap: 1vw;
     justify-content: space-between;
